@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2021 at 08:20 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.33
+-- Generation Time: Oct 15, 2023 at 05:57 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -86,7 +86,9 @@ CREATE TABLE `invoices` (
 
 INSERT INTO `invoices` (`INVOICE_ID`, `NET_TOTAL`, `INVOICE_DATE`, `CUSTOMER_ID`, `TOTAL_AMOUNT`, `TOTAL_DISCOUNT`) VALUES
 (1, 30, '2021-10-19', 14, 30, 0),
-(2, 2626, '2021-10-19', 6, 2626, 0);
+(2, 2626, '2021-10-19', 6, 2626, 0),
+(3, 7878, '2023-09-20', 11, 7878, 0),
+(4, 75, '2023-09-20', 14, 75, 0);
 
 -- --------------------------------------------------------
 
@@ -133,8 +135,8 @@ CREATE TABLE `medicines_stock` (
 --
 
 INSERT INTO `medicines_stock` (`ID`, `NAME`, `BATCH_ID`, `EXPIRY_DATE`, `QUANTITY`, `MRP`, `RATE`) VALUES
-(1, 'Crosin', 'CROS12', '12/34', 2, 2626, 26),
-(2, 'Gelusil', 'G327', '12/42', 0, 15, 12),
+(1, 'Crosin', 'CROS12', '12/34', 0, 2626, 26),
+(2, 'Gelusil', 'G327', '12/42', 4, 15, 12),
 (3, 'Dolo 650', 'DOLO327', '01/23', 3, 30, 24),
 (4, 'Nicip Plus', 'NI325', '05/22', 3, 32.65, 28);
 
@@ -250,7 +252,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `INVOICE_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `INVOICE_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `medicines`
